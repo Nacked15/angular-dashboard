@@ -1,5 +1,9 @@
-# Mcano
+#Admin DashBoard with Angular and Material Theme
 https://www.creative-tim.com/product/material-kit-pro
+
+## Config.
+Download and install yarn
+Go to the project folder and execute $yarn or $yarn install
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.6.
 
