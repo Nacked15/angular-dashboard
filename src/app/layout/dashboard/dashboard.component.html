@@ -1,0 +1,57 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-raised card-carousel">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <div class="carousel slide" data-ride="carousel">
+                    <!-- Indicators Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div *ngFor="let slider of sliders; let i=index" class="{{i === 0 ? 'item active': 'item'}}">
+                            <img [src]="slider.imagePath" alt="Awesome Image" style="min-height: 500px;">
+                            <div class="carousel-caption">
+                                <h4><i class="material-icons">location_on</i>{{slider.text}}</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <i class="material-icons">keyboard_arrow_left</i>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                    </a>
+                </div>
+            </div>
+        </div><!-- End Carousel Card -->
+    </div>
+</div>
+
+<hr>
+
+<ngb-alert [type]="alert.type" (close)="closeAlert(alert)" *ngFor="let alert of alerts">{{ alert.message }}</ngb-alert>
+<div class="alert alert-info">
+    <div class="container-fluid">
+		<div class="alert-icon">
+			<i class="material-icons">info_outline</i>
+		</div>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true"><i class="material-icons">clear</i></span>
+		</button>
+
+    	<b>Info alert:</b> You've got some friends nearby, stop looking at your phone and find them...
+    </div>
+</div>
+<hr />
+
+
+<div class="row">
+    <!-- Notification card -->
+    <div class="col-md-6">
+        <app-notification></app-notification>
+    </div>
+
+    <!-- Chat card -->
+    <div class="col-md-6">
+        <app-chat></app-chat>
+    </div>
+</div>
