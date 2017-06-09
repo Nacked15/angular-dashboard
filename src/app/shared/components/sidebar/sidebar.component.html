@@ -11,7 +11,9 @@
             <li class="nested" [class.expand]="showMenu === 'pages'">
                 <ul class="submenu">
                     <li>
-                        <a routerLink="/register"><span>{{ 'submenu' | translate }}</span></a>
+                        <a routerLink="/register" class="list-group-item">
+                            <span><i class="fa fa-user-plus"></i>&nbsp;{{ 'Register' | translate }}</span>
+                        </a>
                     </li>
                     <li>
                         <a href="javascript:void(0)"><span>{{ 'submenu' | translate }}</span></a>

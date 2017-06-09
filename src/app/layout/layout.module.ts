@@ -24,4 +24,5 @@ import { RegisterComponent } from './register/register.component';
         RegisterComponent
     ]
 })
+
 export class LayoutModule { }

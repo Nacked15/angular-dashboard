@@ -7,6 +7,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { IndexComponent } from './index/index.component';
 
 
 // AoT requires an exported function for factories
@@ -16,7 +17,8 @@ export function HttpLoaderFactory(http: Http) {
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        IndexComponent
     ],
     imports: [
         BrowserModule,

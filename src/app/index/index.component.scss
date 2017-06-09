@@ -1,0 +1,56 @@
+.brand {
+    color: white;
+}
+
+.navbar-transparent .collapse ul.nav li a:hover{
+    color: #9c27b0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.header-filter {
+    background-image: url('../../assets/images/slider2.jpg');
+}
+
+.title {
+    display: block;
+    position: absolute;
+    top: 80px;
+    z-index: 100;
+    text-align: center;
+    color: white;
+}
+
+.title-content {
+    color: #9c27b0;
+}
+
+.card-header {
+    margin: 0 30px;
+    margin-top: -25px;
+    padding: 8px;
+    border-radius: 5px;
+    background: #9c27b0;
+    color: white;
+}
+
+.card-header .card-title{
+    color: white;
+}
+
+.btn-social:hover {
+    color: #9c27b0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float:right;
+}
+
+.center {
+    display: block;
+    margin: 10px auto;
+}

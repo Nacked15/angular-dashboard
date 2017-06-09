@@ -1,0 +1,199 @@
+<nav class="navbar navbar-fixed-top navbar-color-on-scroll navbar-transparent">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" id="menu-toggle" class="navbar-toggle" data-target="#navigation-doc">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar bar1"></span>
+                <span class="icon-bar bar2"></span>
+                <span class="icon-bar bar3"></span>
+            </button>
+            <a href="">
+                <div class="logo-container">
+                    <div class="logo">
+                        <img src="../../favicon.ico" alt="MCano Logo">
+                    </div>
+                    <div class="brand">
+                        MCano
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navigation-doc">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" data-toggle="modal" data-target="#loginModal">Sign in &nbsp;<i class="fa fa-sign-in"></i></a></li>
+                <li><a href="#" data-toggle="modal" data-target="#registerModal">Sign up &nbsp;<i class="fa fa-user-plus"></i></a></li>
+                <li><a href="#">About Us &nbsp;<i class="fa fa-id-card"></i></a></li>
+                <li><a href="#">Contact Us &nbsp;<i class="fa fa-address-book"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="wrapper">
+    <div class="header header-filter">
+        <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+                  <h1 class="title text-center">Matias Cano</h1>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="main main-raised">
+        <div class="section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-center title-content">Wedding Gallery</h2>
+                        <div class="card card-raised card-carousel">
+                          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                              <div class="carousel slide" data-ride="carousel">
+                                  <!-- Indicators Wrapper for slides -->
+                                  <div class="carousel-inner">
+                                      <div *ngFor="let slider of sliders; let i=index" class="{{i === 0 ? 'item active': 'item'}}">
+                                          <img [src]="slider.imagePath" alt="Awesome Image" style="min-height: 500px;">
+                                          <div class="carousel-caption">
+                                              <h4><i class="material-icons">location_on</i>{{slider.text}}</h4>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <!-- Controls -->
+                                  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                      <i class="material-icons">keyboard_arrow_left</i>
+                                  </a>
+                                  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                      <i class="material-icons">keyboard_arrow_right</i>
+                                  </a>
+                              </div>
+                          </div>
+                        </div><!-- End Carousel Card -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer footer-transparent">
+        <div class="container">
+            <nav class="pull-left">
+                <ul>
+                  <li><a href="#">MCano</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="social-area pull-right">
+                <a class="btn btn-social btn-twitter btn-simple" href="https://twitter.com/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="btn btn-social btn-facebook btn-simple" href="https://www.facebook.com/">
+                    <i class="fa fa-facebook-square"></i>
+                </a>
+                <a class="btn btn-social btn-google btn-simple" href="https://plus.google.com/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </div>
+            <div class="copyright">
+                &copy;2017 Matias Cano, by CaribePhoto S.A.
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!-- Modal Login -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-header card-header-text text-center" data-background-color="rose">
+                        <h4 class="card-title">
+                            <!--<i class="material-icons">face</i>&nbsp;Login-->
+                            <span class="fa fa-sign-in"></span>&nbsp;Login
+                            <div class="ripple-container"></div>
+                        </h4>
+                    </div>
+
+                    <div class="content">
+                        <form>
+                          <div class="col-md-10 col-md-offset-1">
+                              <div class="form-group label-floating is-empty">
+                                  <label class="control-label">Email/Username:</label>
+                                  <input type="text" class="form-control">
+                              </div>
+                          </div>
+                          <div class="col-md-10 col-md-offset-1">
+                              <div class="form-group label-floating is-empty">
+                                  <label class="control-label">Password:</label>
+                                  <input type="password" class="form-control">
+                              </div>
+                          </div>
+                          <div class="clearfix"></div>
+                          <div class="col-md-10 col-md-offset-1">
+                              <button type="button" class="btn btn-default btn-sm left" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-success btn-sm right">Submit</button>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Register -->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-header card-header-text text-center" data-background-color="rose">
+                        <h4 class="card-title">
+                            <span class="fa fa-user-plus"></span>&nbsp;Register
+                            <div class="ripple-container"></div>
+                        </h4>
+                    </div>
+
+                    <div class="content">
+                        <form>
+                          <div class="col-md-10 col-md-offset-1">
+                              <div class="form-group label-floating is-empty">
+                                  <label class="control-label">Name:</label>
+                                  <input type="text" class="form-control">
+                              </div>
+                          </div>
+                          <div class="col-md-10 col-md-offset-1">
+                              <div class="form-group label-floating is-empty">
+                                  <label class="control-label">Username:</label>
+                                  <input type="text" class="form-control">
+                              </div>
+                          </div>
+                          <div class="col-md-10 col-md-offset-1">
+                              <div class="form-group label-floating is-empty">
+                                  <label class="control-label">Email:</label>
+                                  <input type="email" class="form-control">
+                              </div>
+                          </div>
+                          <div class="col-md-10 col-md-offset-1">
+                              <div class="form-group label-floating is-empty">
+                                  <label class="control-label">Password:</label>
+                                  <input type="password" class="form-control">
+                              </div>
+                          </div>
+                          <div class="clearfix"></div>
+                          <div class="col-md-10 col-md-offset-1">
+                              <button type="button" class="btn btn-default btn-sm left" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-success btn-sm right">Submit</button>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
